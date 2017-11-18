@@ -1,4 +1,4 @@
-package com.example.wquarter.service;
+package com.example.baseutils.service;
 
 
 
@@ -7,10 +7,11 @@ import android.content.Intent;
 import android.os.IBinder;
 
 import com.igexin.sdk.GTServiceManager;
+
 /**
  * Author:wangcaiwen
  * Time:2017/11/15.
- * Description:
+ * Description:推送
  */
 public class PushService extends Service {
 

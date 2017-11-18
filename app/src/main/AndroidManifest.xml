@@ -6,44 +6,62 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_LOGS" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <!-- iBeancon功能所需权限 -->;
-    <uses-permission android:name="android.permission.BLUETOOTH"/>
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- iBeancon功能所需权限 -->
+    ;
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <!-- 个推3.0电子围栏功能所需权限 -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application
-        android:name=".base.BaseApplication"
+        android:name="com.example.baseutils.base.BaseApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/icon"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <!--替换为在友盟后台申请的应用Appkey-->
-        <meta-data android:value="5a0b85a28f4a9d4210000493" android:name="UMENG_APPKEY"></meta-data>
-        <!--应用的推广渠道名称，Channel ID自定义-->
-        <meta-data android:value="w_yikezhong" android:name="UMENG_CHANNEL"/>
+
+        <!-- 替换为在友盟后台申请的应用Appkey -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5a0b85a28f4a9d4210000493" />
+        <!-- 应用的推广渠道名称，Channel ID自定义 -->
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="w_yikezhong" />
 
         <activity android:name=".ui.activity.MainActivity">
+
+        </activity>
+
+        <service
+            android:name="com.example.baseutils.service.PushService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":pushservice"></service>
+        <service android:name="com.example.baseutils.service.IntentService" />
+
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-
-        <service
-            android:name="com.example.wquarter.service.PushService"
-            android:exported="true"
-            android:label="PushService"
-            android:process=":pushservice">
-        </service>
-        <service android:name="com.example.wquarter.service.IntentService"/>
-
     </application>
 
 </manifest>

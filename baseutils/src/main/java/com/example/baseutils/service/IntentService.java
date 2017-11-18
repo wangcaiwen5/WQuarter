@@ -1,6 +1,8 @@
-package com.example.wquarter.service;
+package com.example.baseutils.service;
+
 import android.content.Context;
 import android.util.Log;
+
 import com.igexin.sdk.GTIntentService;
 import com.igexin.sdk.message.GTCmdMessage;
 import com.igexin.sdk.message.GTTransmitMessage;
@@ -11,6 +13,7 @@ import com.igexin.sdk.message.GTTransmitMessage;
  * onReceiveClientId 接收 cid <br>
  * onReceiveOnlineState cid 离线上线通知 <br>
  * onReceiveCommandResult 各种事件处理回执 <br>
+ *    描述: 推送服务
  */
 public class IntentService extends GTIntentService {
 

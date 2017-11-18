@@ -1,4 +1,4 @@
-package com.example.wquarter.utils;
+package com.example.baseutils.utils;
 
 import android.content.Context;
 import android.os.Handler;
@@ -6,8 +6,8 @@ import android.os.Looper;
 import android.view.Gravity;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.example.wquarter.R;
-import com.example.wquarter.base.BaseApplication;
+import com.example.baseutils.R;
+import com.example.baseutils.base.BaseApplication;
 
 
 /**

@@ -1,4 +1,4 @@
-package com.example.wquarter.base;
+package com.example.baseutils.base;
 
 import android.app.Application;
 import android.content.Context;
@@ -11,7 +11,7 @@ import com.tencent.bugly.crashreport.CrashReport;
 /**
  * Author:wangcaiwen
  * Time:2017/11/14.
- * Description:
+ * Description:app
  */
 
 public class BaseApplication extends Application {

@@ -1,4 +1,4 @@
-package com.example.wquarter.base;
+package com.example.baseutils.base;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

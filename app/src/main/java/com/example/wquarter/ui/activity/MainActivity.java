@@ -1,12 +1,9 @@
 package com.example.wquarter.ui.activity;
 
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import com.example.wquarter.R;
-import com.example.wquarter.base.BaseActivity;
+import com.example.baseutils.base.BaseActivity;
 
 /**
  * Author:wangcaiwen

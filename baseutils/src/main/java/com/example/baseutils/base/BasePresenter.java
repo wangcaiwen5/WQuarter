@@ -1,4 +1,4 @@
-package com.example.wquarter.base;
+package com.example.baseutils.base;
 
 /**
  * Author:wangcaiwen

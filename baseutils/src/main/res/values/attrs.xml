@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Banner">
+        <attr name="size" format="dimension"></attr>
+        <attr name="margin" format="dimension"></attr>
+        <attr name="isShow" format="boolean"></attr>
+        <attr name="autoPage" format="boolean"></attr>
+    </declare-styleable>
+</resources>

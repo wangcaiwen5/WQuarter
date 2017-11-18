@@ -1,4 +1,4 @@
-package com.example.wquarter.utils;
+package com.example.baseutils.utils;
 
 
 import android.content.Context;

@@ -1,11 +1,10 @@
-package com.example.wquarter.base;
+package com.example.baseutils.base;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
-import com.example.wquarter.service.PushService;
 import com.igexin.sdk.PushManager;
 
 import com.umeng.analytics.MobclickAgent;
@@ -23,14 +22,15 @@ public abstract class BaseActivity<P extends BasePresenter> extends AppCompatAct
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        setContentView(getLayoutId());
         super.onCreate(savedInstanceState);
-        super.setContentView(getLayoutId());
         // com.getui.demo.DemoPushService 为第三方自定义推送服务
-        PushManager.getInstance().initialize(this.getApplicationContext(), com.example.wquarter.service.PushService.class);
+        PushManager.getInstance().initialize(this.getApplicationContext(), com.example.baseutils.service.PushService.class);
         // com.getui.demo.DemoIntentService 为第三方自定义的推送服务事件接收类
-        PushManager.getInstance().registerPushIntentService(this.getApplicationContext(), com.example.wquarter.service.IntentService.class);
-
+        PushManager.getInstance().registerPushIntentService(this.getApplicationContext(), com.example.baseutils.service.IntentService.class);
         initView();
+
+
     }
 
     protected abstract void initView();
@@ -68,6 +68,8 @@ public abstract class BaseActivity<P extends BasePresenter> extends AppCompatAct
         if (isCloseCurrentActivity) {
             finish();
         }
+
+
     }
     @Override
     public void showLoading() {
